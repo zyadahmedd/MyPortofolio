@@ -1,0 +1,596 @@
+*{
+    box-sizing: border-box;
+}
+
+.flex{display: flex;align-items: center;}
+
+.full-width{width: 100%;}
+.half-width{width: 50%;}
+
+.padding{padding: 20px;}
+
+h1 {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 72px;
+    letter-spacing: -2.5%;
+}
+
+h2 {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 60px;
+    letter-spacing: -2.5%;
+    margin: 0;
+}
+
+h3 {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: -2.5%;
+    margin: 0;
+}
+
+h4 {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: -2.5%;
+    margin: 0;
+}
+
+p {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -2.5%;
+}
+
+ul {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -2.5%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-decoration: none;
+}
+
+button {
+    width: 160px;
+    height: 56px;
+    border-radius: 10px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    border: none;
+    cursor: pointer;
+    background-color: rgba(124, 58, 237, 1);
+    color: #FFFFFF;
+}
+
+
+body {
+    width: 100%;
+}
+
+.container {
+    margin: 0 auto;
+    width:100%;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 50px auto auto auto auto;
+    grid-template-areas: 
+    "nav nav nav nav nav nav nav nav nav nav nav nav "
+    "header header header header header header header header header header header header"
+    "main main main main main main main main main main main main "
+    "section section section section section section section section section section section section"
+    "footer footer footer footer footer footer footer footer footer footer footer footer"
+    ;
+    gap: 20px;
+}
+/* start nav */
+nav {grid-area: nav;justify-content: space-between;}
+nav .logo img {margin-right: 10px;}
+nav ul {margin-left:40px ;gap: 20px;}
+nav ul li a {color: black;}
+nav .fa {display: none;}
+/* end nav */
+
+/* start header */
+header {grid-area: header;background-image: url(../imag/BG.png);}
+header .content {justify-content: flex-start;}
+header .content .box-one .Btn {gap: 10px;margin: 20px;}
+header .content .box-one .watch {
+    justify-content: center;
+    background-color: white;
+    color: rgba(124, 58, 237, 1);
+}
+/* end header */
+/* start main */
+main {grid-area: main;}
+main .pic {justify-content: center;gap: 30px;}
+/* end main */
+/* start section */
+section {grid-area: section;}
+/* card-one */
+section .card-one {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 30px;
+}
+section .card-one .box-four {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+section .card-one .box-four div {width: 30%;padding: 20px;}
+section .card-one .box-four div img {width: 24px;}
+/* end card-one */
+/* card-two */
+.card-two {
+    margin: auto;
+    justify-content: space-evenly;
+    gap: 20px;
+    background-color: rgba(213, 250, 252, 1);
+}
+.card-two .box-five {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 30px ;
+}
+.card-two .box-five .sec-one {padding: 0 10px;}
+.card-two .box-five .sec-one h2 {margin: 0;}
+.card-two .box-five .sec-two {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 350px;
+    height: 300px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px 5px rgba(0, 0, 0, 0.1);
+}
+.card-two .box-five .sec-two h4 {margin:0;}
+.card-two .box-six {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px ;
+}
+.card-two .box-six .sec-three {
+    width: 400px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px 5px rgba(0, 0, 0, 0.1);
+}
+.card-two .box-six .sec-three h4 {margin: 0;}
+.card-two .box-six .sec-four {
+    width: 300px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px 5px rgba(0, 0, 0, 0.1);
+}
+.card-two .box-six .sec-four h4 {margin: 0;}
+/* end card-two */
+/* start card-three */
+.card-three {justify-content: center;gap: 20px;}
+
+.card-three .box-seven {justify-content: center;}
+.card-three .box-eight .sec-six {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+.card-three .box-eight .sec-six > div {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.card-three .box-eight .sec-six > div h4 , p {margin: 0;}
+.card-three .box-eight .sec-six > div img {width:40px}
+/* end card-three */
+
+/* start card-four */
+.card-four {justify-content: center;gap: 20px;}
+.card-four .text {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.card-four .pic {
+    background-image: url(../imag/Vector.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+/* end card-four */
+
+/* start card-five */
+.box-nine {
+    background-color: rgba(29, 181, 190, 1);
+    justify-content: center;
+    gap: 20px;
+}
+.box-nine .card-six {justify-content: center;}
+.box-nine .card-six a {cursor: pointer;}
+/* end card-five */
+/* end section */
+
+/* start footer */
+footer {
+    grid-area: footer;
+    background-color:black;
+    justify-content: space-between;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    color: white;
+}
+footer .text ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+footer .text ul li a {text-decoration: none;color: white;}
+footer .text ul li a:hover {color: rgba(124, 58, 237, 1);}
+/* end footer */
+
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px auto auto auto auto;
+        grid-template-areas: 
+        "nav"
+        "header"
+        "main"
+        "section"
+        "footer"
+        ;
+    }
+    nav {
+        grid-area: nav;
+    }
+    nav ul {display: none;}
+    nav .fa {
+        display: flex;
+        cursor: pointer;
+    }
+    header {
+        grid-area: header;
+    }
+    header .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    header .content .box-two img {
+        width: 100%;
+    }
+    main {
+        grid-area: main;
+        grid-area: main;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+    }
+    main .pic {
+        display: flex;
+        flex-wrap: wrap;
+        width :60%
+    }
+    section {
+        grid-area: section;
+    }
+    section .card-one {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        padding: 20px;
+        gap: 30px;
+    }
+    section .card-one .box-four div{
+        width: 40%;
+    }
+    section .card-two {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        margin: auto;
+    }
+    section .card-two .box-five {
+        width: 100%;
+        display : flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+    section .card-two .box-five .sec-one {
+        width: 100%;
+        text-align: center;
+    }
+    section .card-two .box-five .sec-two {
+        width: 100%;
+        text-align: center;
+    }
+    section .card-two .box-six {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+    section .card-two .box-six .sec-three{
+        width: 100%;
+    }
+    section .card-two .box-six .sec-four{
+        width: 100%;
+    }
+    .card-three {
+        width: 100%;
+        display:flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+    }
+    .card-three .box-seven {
+        width: 100%;
+        text-align: center;
+    }
+    .card-three .box-eight {
+        width: 100%;
+    }
+    .card-four {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+    }
+    .card-four .text {
+        width: 100%;
+        text-align: center;
+    }
+    .card-four .pic {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+    .box-nine {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+    .box-nine .card-six {
+        width: 100%;
+        text-align: center;
+    }
+    footer {
+        grid-area: footer;
+    }
+    footer .app {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+    
+} 
+
+@media (min-width: 375px) and (max-width: 767px) {
+    body{
+        width: 100%;
+        margin: auto;
+    }
+    .container {
+        margin: auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px auto auto auto auto;
+        grid-template-areas: 
+        "nav"
+        "header"
+        "main"
+        "section"
+        "footer"
+        ;
+    }
+    nav {
+        grid-area: nav;
+        width: 100%;
+    }
+    nav .app {display: none;}
+    nav ul {display: none;}
+    nav .fa {display: flex;}
+    header {
+        grid-area: header;
+    }
+    header .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    header .content .box-two img {
+        width: 100%;
+    }
+    header .content .Btn {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    main {
+        grid-area: main;
+        flex-direction: column;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+    }
+    main .pic {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        width :60%
+    }
+    section {
+        grid-area: section;
+    }
+    section .card-one {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        padding: 20px;
+        gap: 30px;
+    }
+    section .card-one .box-four div{
+        width: 100%;
+        text-align: center;
+    }
+    section .card-two {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        margin: auto;
+    }
+    section .card-two .box-five {
+        width: 100%;
+        display : flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+    section .card-two .box-five .sec-one {
+        width: 100%;
+        text-align: center;
+    }
+    section .card-two .box-five .sec-two {
+        width: 100%;
+        text-align: center;
+    }
+    section .card-two .box-six {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+    section .card-two .box-six .sec-one {
+        width: 100%;
+        text-align: center;
+    }
+    section .card-two .box-six .sec-two {
+        width: 100%;
+        text-align: center;
+    }
+    section .card-two .box-six .sec-three {
+        width: 100%;
+        text-align: center;
+    }
+    section .card-two .box-six .sec-four {
+        width: 100%;
+        text-align: center;
+    }
+    .card-three {
+        display:flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+    }
+    .card-three .box-seven {
+        width: 100%;
+        text-align: center;
+    }
+    .card-three .box-eight {
+        width: 100%;
+    }
+    .card-three .box-eight .sec-six {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        width: 100%;
+    }
+    .card-four {display: block;}
+    .box-nine {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+    }
+    .box-nine .card-five {
+        width: 100%;
+        text-align: center;
+    }
+    .box-nine .card-six {
+        width: 100%;
+    }
+
+    footer {
+        grid-area: footer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+    
+}

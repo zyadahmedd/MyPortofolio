@@ -1,0 +1,114 @@
+*{
+    box-sizing: border-box;
+}
+
+:root{
+    --first-card:hsl(180, 62%, 55%);
+    --second-card:hsl(0, 78%, 62%);
+    --third-card:hsl(34, 97%, 64%);
+    --fourth-card:hsl(212, 86%, 64%);
+}
+
+h1{color: hsl(229, 6%, 66%);}
+h2{color:hsl(234, 12%, 34%);}
+p{color: hsl(229, 6%, 66%);}
+img{float: right;margin-top: 20px;}
+
+body{
+    background-color: hsl(0, 0%, 98%);
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    gap: 20px;
+}
+
+.head{
+    grid-column: 2;
+    text-align: center;
+}
+
+.card-one{
+grid-column: 1;
+grid-row: 2;
+position: relative;
+top: 50px;
+transform: translateY(100px);
+border-top: 3px solid var(--first-card);
+border-radius:10px;
+padding: 50px;
+box-shadow: 0 5px 10px  rgba(0, 0, 0, 0.221) ;
+}
+
+.card-two{
+grid-column: 2;
+grid-row: 2;
+border-radius: 5px;
+border-top: 3px solid var(--second-card);
+padding: 50px;
+box-shadow: 0 5px 10px  rgba(0, 0, 0, 0.221) ;
+}
+
+.card-three{
+grid-column: 3;
+grid-row: 2;
+position: relative;
+top: 50px;
+transform: translateY(100px);
+border-radius: 5px;
+border-top: 3px solid var(--third-card);
+padding: 50px;
+box-shadow: 0 5px 10px  rgba(0, 0, 0, 0.221) ;
+}
+
+.card-four{
+grid-column: 2;
+grid-row: 3;
+border-radius: 5px;
+border-top: 3px solid var(--fourth-card);
+padding: 50px;
+box-shadow: 0 5px 10px  rgba(0, 0, 0, 0.221) ;
+}
+
+
+
+@media screen and (max-width:600px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5,1fr);
+        grid-template-areas: "head" 
+        "card-one"
+        "card-two"
+        "card-three"
+        "card-four"
+        ;
+        gap: 10px;
+
+    }
+    .head {
+        grid-area: head;
+      
+    }
+    .card-one {
+        grid-area: card-one;
+        position: relative;
+        top: 0;
+        transform: translateY(0);
+    }
+    .card-two {
+        grid-area: card-two;
+    }
+    .card-three {
+        grid-area: card-three;
+        position: relative;
+        top: 0;
+        transform: translateY(0);
+    }
+    .card-four {
+        grid-area: card-four;
+    }
+}

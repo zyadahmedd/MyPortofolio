@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+}
+
+/* start global */
+
+.all-cards {
+  color: white;
+  padding: 40px 40px;
+  text-align: left;
+  width: 100%;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-family: "DM Sans", sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: -3px;
+}
+
+p {
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.7;
+  opacity: 0.6;
+  margin-bottom: 40px;
+}
+
+button {
+  background-color: white;
+  color: hsl(31, 77%, 52%);
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  padding: 10px 30px;
+}
+
+/* end global */
+
+/* start body */
+
+body {
+  background-color: antiquewhite;
+  margin: auto 50px;
+}
+
+.container {
+  margin: 30px auto;
+  width: 100%;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.402);
+  border: 1px solid white;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-template-areas: "card-one card-two card-three";
+}
+
+.card-one {
+  grid-area: card-one;
+  background-color: hsl(31, 77%, 52%);
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.card-two {
+  grid-area: card-two;
+  background-color: hsl(184, 100%, 22%);
+}
+
+.card-three {
+  grid-area: card-three;
+  background-color: hsl(179, 100%, 13%);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+/* end body */
+
+/* start media for screen mobile */
+
+@media screen and (max-width: 698px) {
+  .container {
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+      "card-one"
+      "card-two"
+      "card-three";
+  }
+  .card-one {
+    grid-area: card-one;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 0;
+  }
+  .card-three {
+    grid-area: card-three;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 0px;
+  }
+}
+
+@media (min-width: 699px) and (max-width: 910px) {
+  .container {
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: "card-one card-two card-three";
+  }
+}
+
+@media (min-width: 911px) {
+  .container {
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.402);
+    border: 1px solid white;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 450px;
+    grid-template-areas: "card-one card-two card-three";
+  }
+  button {
+    background-color: transparent;
+    color: white;
+    border: 1px solid;
+    border-radius: 20px;
+    cursor: pointer;
+    padding: 10px 30px;
+  }
+}

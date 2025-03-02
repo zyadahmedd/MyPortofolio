@@ -2,7 +2,7 @@ import React from "react";
 import { FaGithub, FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
-import axios from "axios";
+// import axios from "axios";
 import "../stylecss/StyleContact.css";
 
 export default function ContactComponent() {

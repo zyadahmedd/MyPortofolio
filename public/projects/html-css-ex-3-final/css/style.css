@@ -490,7 +490,7 @@ footer .text ul li a:hover {
   }
 }
 
-@media (min-width: 375px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   body {
     width: 100%;
     margin: auto;
